@@ -2,16 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -23,16 +13,56 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.han{
+  font-size: 4rem;
+}
+.kana{
+  font-size: 2.2rem;
+  color:#61dafb;
+}
+.meaning{
+  color:#cccccc;
+}
+.roman{
+  font-size: 1rem;
+  color:palevioletred;
+}
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.setting{
+  position: absolute;
+  right:10px;
+  top:10px;
+  color:#ccc;
+  font-size: 0.8rem;
+}
+
+button {
+  display: inline-block;
+  padding: 5px 10px; /* 按钮内边距 */
+  font-size: 14px; /* 文本大小 */
+  font-family: 'Arial', sans-serif; /* 字体 */
+  color: #ffffff; /* 字体颜色 */
+  background: cornflowerblue; /* 背景渐变色 */
+  border: none; /* 无边框 */
+  border-radius: 25px; /* 边框圆角 */
+  cursor: pointer; /* 鼠标悬浮时的样式 */
+  text-align: center; /* 文本居中 */
+  text-decoration: none; /* 去除文本下划线 */
+  transition: all 0.3s ease 0s; /* 过渡效果 */
+}
+.green{
+  background: aquamarine;
+}
+
+.bottom{
+  position: fixed;
+  bottom:10px;
+  text-align: center;
+  font-size: 0.8rem;
+  color:#999;
+  width: 100vw;
 }

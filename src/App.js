@@ -65,7 +65,7 @@ function App() {
 
       </header>
         <div className="bottom">
-            目前已收录{w?.length}个词语
+            目前已收录<span style={{color:"#61dafb"}}>{w?.length}</span>个词语
         </div>
     </div>
   );

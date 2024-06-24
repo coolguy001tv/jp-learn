@@ -14,6 +14,7 @@ const getRand = function (len){
 function App() {
     const [w, setW] = useState([])
     const [index, setIndex] = useState(0)
+    const [times, setTimes] = useState(0);//这次学习的数量
 
     const [checkAnswer, setCheckAnswer] = useState(false)
 
@@ -36,6 +37,7 @@ function App() {
     const setNext = function (){
         setCheckAnswer(false);
         setIndex(getCurrentRand())
+        setTimes(time=>time+1);
     }
 
     useEffect( ()=>{
@@ -56,6 +58,7 @@ function App() {
           {shouldShow('kana')&&<div className="kana">{w[index]?.[1]}</div>}
           {shouldShow('meaning')&& <div className="meaning">{w[index]?.[2]}</div>}
           {shouldShow('roman')&&<div className="roman">{w[index]?.[3]}</div>}
+          {shouldShow('sentence')&&<div className="sentence">{w[index]?.[4]}</div>}
 
           <div style={{marginTop:10}}>
               <button onClick={setNext} style={{marginRight:10}}>下一个</button>
@@ -65,7 +68,9 @@ function App() {
 
       </header>
         <div className="bottom">
-            目前已收录<span style={{color:"#61dafb"}}>{w?.length}</span>个词语
+            <div>今天已经学习<span style={{color:'#FF8C00', fontSize: "1.1rem",margin:2}}>{times}</span>个词语</div>
+            <div>目前已收录<span style={{color:"#61dafb", fontSize: "1.1rem",margin:2}}>{w?.length}</span>个词语</div>
+
         </div>
     </div>
   );

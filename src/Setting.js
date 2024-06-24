@@ -5,14 +5,15 @@ const selection = {
     "han":"汉字写法",
     "kana":"假名写法",
     "meaning":"含义",
-    "roman":"罗马音"
+    "roman":"罗马音",
+    "sentence":"例句",
 }
 const CheckboxComponent = (props) => {
     const {checkedItems, handleChange} = props;
 
     return (
         <div className={'setting'}>
-            {['han', 'kana', 'meaning','roman'].map((item) => (
+            {['han', 'kana', 'meaning','roman','sentence'].map((item) => (
                 <label key={item}>
                     <input
                         type="checkbox"

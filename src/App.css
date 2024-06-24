@@ -27,7 +27,10 @@
   font-size: 1rem;
   color:palevioletred;
 }
-
+.sentence{
+  font-size:1.2rem;
+  color:#7FFF00;
+}
 .App-link {
   color: #61dafb;
 }

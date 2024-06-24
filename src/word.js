@@ -4,6 +4,7 @@
 // | 汉字写法      | 假名写法       | 含义                     | 罗马音             | 例句 |
 // | :-------- | :--------- | :--------------------- | :-------------- | :- |
 // | 言う        | いう         |                        | iu              |  abc  |
+// | \\~でしょう    | \\~でしょう     | ……吧                    | desyou          |    |
 //
 //
 // `
@@ -17,7 +18,8 @@ export const getWordList = async function (){
         const result = reg.exec(x);
         if(result){
             const [,han,kana,meaning,roman,sentence] = result;
-            final_words.push([han,kana,meaning,roman,sentence])
+            const tReg = /\\/g
+            final_words.push([han.replace(tReg,''),kana.replace(tReg,''),meaning,roman,sentence])
         }
 
     }
